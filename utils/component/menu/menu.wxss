@@ -1,0 +1,24 @@
+/* 菜单列表 */
+.menu{
+  margin-top:80rpx;
+  background:#fff;
+}
+.menu-item{
+  display: flex;
+  padding-top: 16rpx;
+}
+.menu-item:last-child{
+  padding-bottom: 16rpx;
+}
+.menu-name{
+  color: #333;
+  font-size: 28rpx;
+}
+.menu-item>view{
+  flex:0 0 25%;
+  text-align: center;
+}
+.menu image{
+  height: 94rpx;
+  width: 94rpx;
+}

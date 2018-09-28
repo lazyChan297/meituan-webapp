@@ -1,0 +1,36 @@
+<view class="fixed-top">
+    <navigator>惠民安居北湖苑</navigator>
+    <view class="search-input">
+      <input placeholder='冒菜' placeholder-class='placeholder'></input>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" bindscroll="scroll" style='height:100%'>
+  <menu></menu>  
+  <view class='slideMenu'>
+    <view class=''>综合排序</view>
+    <view class='' bindtap='getListBy' data-num="1">销量最高</view>
+    <view class='' bindtap='getListBy' data-num="2">速度最快</view>
+    <view class=''>筛选</view>
+  </view>
+  <view class="list">
+    <navigator class="item" url='../shop/index?id={{item.id}}&name={{item.sname}}&img={{item.logo}}' wx:for="{{list}}" wx:key="index" bindtap='test' data-info="{{item}}">
+      <view class="item-left">
+        <image src="{{item.logo}}" ></image>
+      </view>
+      <view class="item-right">
+        <view class="black3-32">{{item.sname}}</view>
+        <view class='gray6-28 layout-lr'>
+          <text>4.9</text>
+          <text class="layout-center">月售<text>{{item.sold}}</text>  </text>  
+          <text class="bor-right">{{item.speed}}分钟</text>
+          <text>{{item.distance}}m</text>
+        </view>
+        <view class='gray6-28 bottom'>
+          <text class="bor-right gray6-28">起送￥<text>{{item.qsprice}}</text></text>
+          <text class="gray6-28">配送￥<text>{{item.psprice}}</text></text>
+          <!-- <text>人均￥<text>0</text></text> -->
+        </view>
+      </view>
+    </navigator>
+  </view>
+  </scroll-view>

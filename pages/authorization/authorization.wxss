@@ -1,0 +1,16 @@
+.title{
+  color:#333;
+  font-size:30rpx;
+  text-align:center;
+  margin-top:300rpx;
+}
+.login{
+  width:122rpx;
+  height:62rpx;
+  color:#fff;
+  text-align:center;
+  line-height:62rpx;
+  background:#f7d373;
+  font-size:30rpx;
+  margin:30rpx auto;
+}

@@ -1,0 +1,6 @@
+<view class="page">
+  <image src='../../images/logo.jpg' class='logoImage'></image>
+  <view class='logoTitle'>美团外卖</view>
+  <view class='gray'>申请获得你的公开信息(昵称,头像等)</view>
+  <button  plain="false" class='loginButton' hover-class='none'  open-type="getUserInfo" bindgetuserinfo="wxlogin" >微信授权</button>
+</view>

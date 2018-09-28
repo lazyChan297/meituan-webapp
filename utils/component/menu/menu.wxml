@@ -1,0 +1,39 @@
+<view class="menu">
+    <view class="menu-item">
+      <view>
+        <image src="../../../images/menu/meishi.png"></image>
+        <view class='menu-name'>美食</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/chaoshi.png"></image>
+        <view class='menu-name'>超市</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/shengxian.png"></image>
+        <view class='menu-name'>生鲜</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/zhuansong.png"></image>
+        <view class='menu-name'>专送</view>
+      </view>
+      
+    </view>
+    <view class="menu-item">
+      <view>
+        <image src="../../../images/menu/wancan.png"></image>
+        <view class='menu-name'>晚餐优选</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/tiandian.png"></image>
+        <view class='menu-name'>甜点饮品</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/xiaochi.png"></image>
+        <view class='menu-name'>小吃馆</view>
+      </view>
+      <view>
+        <image src="../../../images/menu/jiachang.png"></image>
+        <view class='menu-name'>家常菜</view>
+      </view>
+    </view>
+  </view>

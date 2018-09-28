@@ -1,0 +1,17 @@
+<view class="page">
+  <view class='address-list'>
+    <view class='address-item' wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class='detail'>{{item.addr}}</view>
+      <view>
+        <text class="surname">{{item.name}}</text>
+        <text class='gender'>{{item.gender==1?'先生':'女士'}}</text>
+        <text class='phone'>{{item.phone}}</text>
+        <image src='../../../images/bianji.png' data-info='{{item}}' bindtap='updateAddr'></image>
+      </view>
+    </view>
+  </view>
+  <view class='add' hover-class='none' bindtap="addAddr" >
+    <image src="../../../images/plus.png"></image>
+    <text>新增收获地址</text>
+  </view>
+</view>

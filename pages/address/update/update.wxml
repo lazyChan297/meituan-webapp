@@ -1,0 +1,34 @@
+<view class="updateAddrView">
+  <view class='table'>
+  <view class='tr'>
+    <view class='td-a'>联系人:</view>
+    <view class='td-b'>
+      <input placeholder='请填写收货人的姓名'  data-key="name" value='{{address.name}}'></input>
+    </view>
+  </view>
+  <view class='tr'>
+    <view class='td-a'></view>
+    <view class='td-b'>
+      <radio-group bindchange="chooseGender">
+        <radio color="#f7d373" checked="{{address.gender==1}}" value='1'></radio><text class='gender'>先生</text>
+        <radio color="#f7d373" value='0' checked="{{address.gender==0}}"></radio><text class='gender'>女士</text>
+      </radio-group>
+    </view>
+  </view>
+  <view class='tr'>
+    <view class='td-a'>手机号:</view>
+    <view class='td-b'>
+      <input placeholder='请填写收货人的手机号码' placeholder-class='placeholder' bindinput='getInput' data-key="phone" value="{{address.phone}}"></input>
+    </view>
+  </view>
+  <view class='tr'>
+    <view class='td-a'>收货地址:</view>
+    <view class='td-b'>
+      <input placeholder='请填写收货人的地址' bindinput='getInput' data-key="addr" value="{{address.addr}}"></input>
+    </view>
+  </view>
+  </view>
+  <view class='btnView'>
+    <button plain='false' class='save' bindtap='addAddr'>保存地址</button>
+  </view>
+</view>

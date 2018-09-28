@@ -1,0 +1,79 @@
+<scroll-view class='submitView' scroll-y="true">
+  <view class="tab">
+  <view class='{{currentTab==1?"tab-left":""}}' bindtap='switchTab' data-index='1'>外卖配送    
+  </view>
+  <view class='{{currentTab==2?"tab-right":""}}' bindtap='switchTab' data-index='2'>到店自取</view>
+    
+  </view>
+  <view class="tab-content" wx:if="{{currentTab==1}}">
+    <view class='tab-content-item yellow' bindtap='openAddr' wx:if="{{!address}}">选择收货地址</view>
+    <view class='address' wx:else>
+      <view class='addr'>{{address.addr}}</view>
+      <view>
+        <text class='name'>{{address.name}}</text>
+        <text class='gender'>{{address.gender==1?'先生':'女士'}}</text>
+        <text class='phone'>{{address.phone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="tab-content" wx:if="{{currentTab==2}}">
+    <view class="black3-28">商家地址</view>
+    <view class="black3-40">{{store.address}}</view>
+    <view>
+      <text class='black3-28 bold'>距您{{store.distance/1000}}km | </text><text class="blue bold">查看地图</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-title">
+      <image src='{{store.logo}}' ></image>
+      <text>{{store.sname}}</text> 
+    </view>
+    <view class="prodList" style='height:{{height}}'>
+       <view class="prodItem" wx:for="{{listing}}" wx:key="index">
+        <view class="item-left">
+           <image src="{{item.info.imageUrl}}"></image> 
+        </view>
+        <view class='item-center'>
+          <view class='black3-30'>
+            {{item.info.pname}}
+          </view>
+          <view class='gray9-26'>x{{item.num}}</view>
+        </view>
+        <view class="item-right black3-30">
+        ￥{{item._price}}</view>
+      </view>
+    </view>
+    <view class='flex-layout'>
+      <view class='left'>包装费</view>
+      <view class='right'>￥1</view>
+    </view>
+    <view class='flex-layout'>
+      <view class='left'>配送费</view>
+      <view class='right'>{{store.psprice}}</view>
+    </view>
+    <view class='flex-layout'>
+      <view class='left'>合计</view>
+      <view class='right'>{{total}}</view>
+    </view>
+  </view>
+  <view class='submit' bindtap='submit'>提交订单</view>
+</scroll-view>
+
+<view class='modal-screen' wx:if="{{modal}}" bindtap='closeAddr'></view>
+  <view class='modal-window' animation="{{addrAnimation}}" style='bottom:{{-y}}px'>
+    <view class='modal-title'>
+      <text class='cancel' bindtap="closeAddr">取消</text>
+      <text class='center'>我的收货地址</text>
+    </view>
+    <view class='address-list'>
+    <view class='address-item' wx:for="{{addressList}}" wx:key="{{item.id}}" bindtap='chooseAddr' data-info="{{item}}">
+      <view class='detail'>{{item.addr}}</view>
+      <view>
+        <text class="surname">{{item.name}}</text>
+        <text class='gender'>{{item.gender==1?'先生':'女士'}}</text>
+        <text class='phone'>{{item.phone}}</text>
+        <image src='../../../images/bianji.png'></image>
+      </view>
+    </view>
+  </view>
+  </view>

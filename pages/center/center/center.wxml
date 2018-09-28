@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="header">
+    <image src="{{avatarUrl}}"></image>
+    <view class="userInfo">
+      <view class='username' bindtap='toAuth'>{{username}}</view>
+    </view>
+  </view>
+  <view class='list'>
+    <navigator class='item' hover-class="none" url='../../address/list/list'>我的地址</navigator>
+    <navigator class='item' hover-class="none">帮助和反馈</navigator>
+  </view>
+</view>

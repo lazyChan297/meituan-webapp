@@ -1,0 +1,76 @@
+.order-item{
+  background:#fff;
+  padding: 0 20rpx;
+  margin-bottom: 16rpx;
+}
+.order-item-head{
+  display:flex;
+  height:130rpx;
+  align-items:center;
+  border-bottom: 2rpx solid #eee;
+}
+.order-item-head image{
+  width: 80rpx;
+  height: 80rpx;
+  margin:0 16rpx 0 30rpx;
+}
+.order-item-head .storeName{
+  color: #333;
+  font-size: 30rpx;
+  flex: 1;
+}
+.order-item-head .orderStatu{
+  color: #333;
+  font-size: 30rpx;
+}
+.listing{
+  padding-left:126rpx;
+  padding-top:20rpx;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 30rpx;
+}
+.listing>view{
+  display: flex;
+  line-height: 60rpx;
+}
+.listing>view>text{
+  display: block;
+  flex: 1;
+}
+.right{
+  text-align: right;
+}
+.total{
+  text-align:right;
+  color:#666;
+  font-size:30rpx;
+  border-bottom:2rpx solid #eee;
+  padding-bottom:16rpx;
+}
+.order-item-buttom{
+  height: 112rpx;
+  text-align:right;
+  box-sizing:border-box;
+}
+.order-item-buttom navigator{
+  display:inline-block;
+  height:74rpx;
+  width:170rpx;
+  line-height:74rpx;
+  vertical-align:middle;
+  margin:19rpx 0;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+  margin-left: 20rpx;
+}
+.order-item-buttom .gray{
+  border: 1rpx solid #666;
+  color: #666;
+  box-sizing: border-box;
+}
+.order-item-buttom .yellow{
+  background: #f7d373;
+}
+ 

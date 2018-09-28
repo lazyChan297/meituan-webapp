@@ -1,0 +1,31 @@
+.black3-28{
+  color: #333;
+  font-size: 28rpx;
+  line-height:50rpx;
+  margin:0 20rpx;
+}
+/*  加号  */
+.add{
+  height:50rpx;
+  background:#f7d277;
+  width:50rpx;
+  border-radius:50%;
+  color:#333;
+  font-size:50rpx;
+  font-weight:bold;
+  text-align:center;
+  line-height:46rpx;
+}
+/* 减号 */
+.minus{
+  border: 2rpx solid #c5c5c5;
+  box-sizing: border-box;
+  color:#c5c5c5;
+  height: 50rpx;
+  width: 50rpx;
+  border-radius:50%;
+  font-weight:bold;
+  text-align:center;
+  line-height:44rpx;
+  font-size: 50rpx;
+}

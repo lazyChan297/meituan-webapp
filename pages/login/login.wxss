@@ -1,0 +1,33 @@
+page{
+  background:#FFF;
+}
+.logoImage{
+  width:132rpx;
+  height:132rpx;
+  margin:75rpx auto 0;
+  display:block;
+}
+.logoTitle{
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align:center;
+  margin-top:16rpx;
+  margin-bottom:20rpx;
+}
+.gray{
+  color: #a8a8a8;
+  font-size:30rpx;
+  text-align: center;
+}
+button.loginButton{
+  background:#fcb900;
+  margin:30rpx auto;
+  border:none;
+  width: 588rpx;
+  height: 96rpx;
+  color: #333;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 96rpx;
+}

@@ -1,0 +1,5 @@
+<view style='display:flex'>
+<view class="minus" wx:if="{{num>0}}" catchtap='minus'>-</view>
+<text class="black3-28" wx:if="{{num>0}}">{{num}}</text>
+<view class="add" catchtap='add'>+</view>
+</view>

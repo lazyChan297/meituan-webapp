@@ -1,0 +1,200 @@
+<view class="head">
+   <view class="head-left">
+    <image src='{{store.logo}}' mode='' lazy-load="true"></image>
+  </view> 
+  <view class="head-right">
+    <view>
+      <text>起送 ￥{{store.qsprice}} | </text>
+      <text>{{store.speed}}分钟 | </text>
+    </view>
+    <view>
+      <text>公告：欢迎光临{{store.sname}}</text>
+    </view>
+  </view>
+</view>
+<view class="tab-list">
+  <view class="{{currentIndex==0?'active tab-item':'tab-item'}}" data-index='0' bindtap='switchTab'>菜单</view>
+  <view class="{{currentIndex==1?'active tab-item':'tab-item'}}" data-index='1' bindtap='switchTab'>评价</view>
+  <view class="{{currentIndex==2?'active tab-item':'tab-item'}}" data-index='2' bindtap='switchTab'>商家</view>
+  <view class="active-item" style="transform:translateX({{move}}px)"></view>
+</view>
+<swiper current='{{current}}' bindchange="swiperChange" class="swiper" style='height:{{pageHeight}}px'>
+  <swiper-item class="menu">
+    <view class="swiper-item-left">
+      <view class="{{currentMenu==1?'active-menu-item':'menu-item'}}" bindtap='scrollTo' data-index="1">热销</view>
+      <view class="{{currentMenu==2?'active-menu-item':'menu-item'}}" bindtap='scrollTo' data-index="2">推荐</view>
+      <view class="{{currentMenu==3?'active-menu-item':'menu-item'}}" bindtap='scrollTo' data-index="3">超值套餐</view>
+      
+    </view>
+     <scroll-view class="swiper-item-right" scroll-y="true" scroll-into-view="{{scrollToView}}">
+      <view id="scroll1" class="scroll-item">
+        <view class="scroll-item-title black3-32">热销</view>
+        <!-- 商品 -->
+        <view class="scroll-item-content" bindtap='openModal' wx:for="{{hot}}" wx:key="{{item.id}}" data-info="{{item}}">
+          <view class="content-left">
+            <image src='{{item.imageUrl}}' mode='aspectFit' lazy-load='true'></image>
+          </view>
+          <view class="content-right">
+            <view class='black3-34'>{{item.pname}}</view>
+            <view class='mt10'>
+              <text class='gray6-24'>月售{{item.sold}}</text>
+              <text class='gray6-24'>赞 {{item.plike}}</text>
+            </view>
+            <view class='content-bottom'>
+              <text class="red-32">￥{{item.price}}</text>
+               <count bindcountNum="countNum" price="{{item.price}}" prodName="{{item.pname}}" prod="{{item}}"></count> 
+              </view> 
+          </view>
+        </view>
+        
+      </view>
+      <view id="scroll2" class="scroll-item">
+        <view class="scroll-item-title black3-32">推荐</view>
+        <view class="scroll-item-content" bindtap='openModal' wx:for="{{intro}}" wx:key="{{item.id}}" data-info="{{item}}">
+          <view class="content-left">
+            <image src='{{item.imageUrl}}' mode='aspectFit' lazy-load='true'></image>
+          </view>
+          <view class="content-right">
+            <view class='black3-34'>{{item.pname}}</view>
+            <view class='mt10'><text class='gray6-24'>月售{{item.sold}}</text><text class='gray6-24'>赞 {{item.plike}}</text> </view>
+            <view class='content-bottom'>
+              <text class="red-32">￥{{item.price}}</text>
+               <count bindcountNum="countNum" price="{{item.price}}" prodName="{{item.pname}}" prod="{{item}}"></count> 
+              </view> 
+          </view>
+        </view>
+      </view>
+      <view id="scroll3" class="scroll-item" >
+        <view class="scroll-item-title black3-32">套餐</view>
+        <view class="scroll-item-content" bindtap='openModal' wx:for="{{comb}}" wx:key="{{item.id}}" data-info="{{item}}">
+          <view class="content-left">
+            <image src='{{item.imageUrl}}' mode='aspectFit' lazy-load='true'></image>
+          </view>
+          <view class="content-right">
+            <view class='black3-34'>{{item.pname}}</view>
+            <view class='mt10'><text class='gray6-24'>月售{{item.sold}}</text><text class='gray6-24'>赞 {{item.plike}}</text> </view>
+            <view class='content-bottom'>
+              <text class="red-32 bold">￥{{item.price}}</text>
+               <count bindcountNum="countNum" price="{{item.price}}" prodName="{{item.pname}}" prod="{{item}}"></count> 
+              </view> 
+          </view>
+        </view>
+      </view>
+      
+    </scroll-view> 
+    
+  </swiper-item>
+  <swiper-item class='scorePage'>
+    <view class='score'>
+      <view class='score-left'>
+        <view class="sjScore">4.6</view>
+        <view class='gray6-24'>商家评分</view>
+      </view>
+      <view class='score-center'>
+        <view class='star-list'>
+          <text>口味</text>
+          <view class="star"></view>
+          <view class="star"></view>
+          <view class="star"></view>
+          <view class="star"></view>
+          <text>4.0</text>
+        </view>
+        <view class='star-list'>
+          <text>包装</text>
+          <view class="star"></view>
+          <view class="star"></view>
+          <view class="star"></view>
+          <view class="star"></view>
+          <text>4.0</text>
+        </view>
+        
+      </view>
+      <view class='score-right'>
+        <view class='psScore'>4.1</view>
+        <view class='gray6-24'>配送评分</view>
+      </view>
+    </view>
+    <view class='tagList'>
+      <view class='{{currentItem==1?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="1">配送速度快</view>
+      <view class='{{currentItem==2?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="2">好吃</view>
+      <view class='{{currentItem==3?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="3">服务好</view>
+      <view class='{{currentItem==4?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="4">配送速度快</view>
+      <view class='{{currentItem==5?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="5">配送速度快</view>
+    </view>
+    <scroll-view class='scoreList'>
+      <view class='scoreItem'>
+        <view class='scoreItem-left'>
+          <image src='../../images/user.jpg' mode='center'></image>
+        </view>
+        <view class='scoreItem-right'>
+          <view><text class='username'>用户名</text> <text class='time'>2018.8.10</text> </view>
+          <view class='scoreItem-txt'>
+            好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃
+          </view>
+        </view>
+      </view>
+      <view class='scoreItem'>
+        <view class='scoreItem-left'>
+          <image src='../../images/user.jpg' mode='center'></image>
+        </view>
+        <view class='scoreItem-right'>
+          <view><text class='username'>用户名</text> <text class='time'>2018.8.10</text> </view>
+          <view class='scoreItem-txt'>
+            好吃好吃
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item class="shopPage">
+    <view class='shopInfo'>
+      {{store.address}}
+    </view>
+    <view class='shopInfo'>
+      提供高品质送餐服务
+    </view>
+  </swiper-item>
+</swiper>
+<view class="bottom">
+  <view class="bottom-left">
+    <view class="{{total>=store.qsprice?'mtlogo enough':'mtlogo empty'}}" bindtap="openCart"></view>
+    <text class='enough' wx:if="{{total>0}}">￥{{total}}</text>
+    <text class="empty" wx:else>购物车空空如也~</text>
+    <view class="white-34">￥{{total}}</view>
+    <text class="">另需配送费3元 |</text>
+  </view>
+  <view class='{{total>=store.qsprice?"submit":"unsubmit"}}' bindtap="submit" >
+    {{total>=store.qsprice?'去结算':store.qsprice+'起送'}}
+  </view>
+</view>
+<!-- 商品详情弹窗 -->
+<view class="modal-screen" style='height:{{modalHeight}}px' wx:if="{{modal}}">
+   <view class="modal-content">
+      <image src='{{currentProd.imageUrl}}'></image>
+      <view class='prodtitle'>{{currentProd.pname}}</view>
+      <view class='prodinfo'><text>月售</text><text>{{currentProd.sold}}</text><text>赞</text><text>{{currentProd.plike}}</text></view>
+      <view class='proddescribe'>{{currentProd.describe||''}}</view>
+      <view class='modal-content-bottom'>
+        <text class='red-40'>￥{{currentProd.price}}</text>
+        <view>
+          <count bindcountNum="countNum" price="{{currentProd.price}}" prodName="{{currentProd.pname}}" prod="{{item}}"></count> 
+        </view>
+      </view>
+   </view> 
+   <view class='close' bindtap='closeModal'></view>
+</view> 
+
+ <!-- 购物车弹窗  -->
+ <view class='modal-screen' style='height:{{modalHeight-55}}px' wx:if="{{cartModal}}">
+      <view class='cartModal'>
+        
+        <view class="delete">删除</view>
+        <view class='cart-list'>
+          <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.info.id}}">
+            <text class='black3-30'>{{item.info.pname}}</text><text class='black3-30'>￥{{item.total}}</text>
+            <count prod="{{item.info}}" bindcountNum="countNum" price="{{item.info.price}}" num="{{item.num}}" ></count>
+          </view>
+        </view>
+      </view>
+ </view>
+

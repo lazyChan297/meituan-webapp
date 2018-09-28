@@ -1,0 +1,56 @@
+<view class="orderListView">
+  <view class='order-list'>
+    <view class='order-item'>
+      <view class='order-item-head'>
+        <image src='http://p1.meituan.net/200.0/deal/765b3c54939c85ec5caee12d94ffa9e524962.jpg@126_0_388_388a%7C267h_267w_2e_100Q' />
+        <view class='storeName'>麦当劳</view>
+        <view class='orderStatu'>订单完成</view>
+      </view>
+      <view class='listing'>
+        <view>
+          <text>巨无霸汉堡</text>
+          <text class='right'>X1</text>
+          
+        </view>
+        <view>
+        <text>中薯</text>
+          <text class='right'>X1</text>
+        </view>
+      </view>
+      <view class='total'>
+        <text>共2件商品，实付100元</text>
+      </view>
+      <view class='order-item-buttom'>
+        <navigator class='gray'>再来一单</navigator>
+        <navigator class='yellow'>去评价</navigator>
+      </view>
+    </view>
+    <view class='order-item'>
+      <view class='order-item-head'>
+        <image src='http://p1.meituan.net/200.0/deal/765b3c54939c85ec5caee12d94ffa9e524962.jpg@126_0_388_388a%7C267h_267w_2e_100Q' />
+        <view class='storeName'>麦当劳</view>
+        <view class='orderStatu'>订单完成</view>
+      </view>
+      <view class='listing'>
+        <view>
+          <text>巨无霸汉堡</text>
+          <text class='right'>X1</text>
+          
+        </view>
+        <view>
+        <text>中薯</text>
+          <text class='right'>X1</text>
+        </view>
+      </view>
+      <view class='total'>
+        <text>共2件商品，实付100元</text>
+      </view>
+      <view class='order-item-buttom'>
+        <navigator class='gray'>再来一单</navigator>
+        <navigator class='yellow'>去评价</navigator>
+      </view>
+    </view>
+  </view>
+
+  
+</view>

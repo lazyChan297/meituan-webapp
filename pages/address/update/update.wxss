@@ -1,0 +1,39 @@
+.updateAddrView{
+  box-sizing: border-box;
+}
+.table{
+  background: #fff;
+}
+.tr{
+  height:96rpx;
+  margin:0 20rpx;
+  line-height:96rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  font-size:30rpx;
+  color: #333;
+}
+.td-a{
+  min-width: 120rpx;
+  margin-right: 10rpx;
+}
+.gender{
+  margin-right:20rpx;
+  line-height:96rpx;
+  display:inline-block;
+  vertical-align:middle; 
+}
+.placeholder{
+  color: #666;
+}
+.btnView button.save{
+  margin:30rpx 40rpx 0;
+  background: #f7d373;
+  font-size: 32rpx;
+  color: #333;
+  height: 78rpx;
+  line-height: 78rpx;
+  border: none;
+}

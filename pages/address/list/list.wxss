@@ -1,0 +1,58 @@
+.address-list{
+  background:#fff;
+}
+.address-item{
+  position: relative;
+  height: 132rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-bottom:2rpx solid #eee;
+}
+.address-item:last-child{
+  border-bottom: none;
+}
+.address-item .detail{
+  color: #333;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.address-item image{
+  position:absolute;
+  width:50rpx;
+  height:50rpx;
+  right:20rpx;
+  top:50%;
+  margin-top:-25rpx;
+}
+.surname,.gender,.phone{
+  color: #666;
+  font-size: 30rpx;
+}
+.surname{
+  margin-right: 30rpx;
+}
+.gender{
+  margin-right: 50rpx;
+}
+
+.add{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align:center;
+}
+.add text{
+  display:inline-block;
+  vertical-align:middle;
+}
+.add image{
+  width:50rpx;
+  height:50rpx;
+  vertical-align:text-top;
+  margin-right:20rpx;
+}
