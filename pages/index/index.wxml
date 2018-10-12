@@ -1,5 +1,5 @@
 <view class="fixed-top">
-    <navigator>惠民安居北湖苑</navigator>
+    <navigator>民族大道23号</navigator>
     <view class="search-input">
       <input placeholder='冒菜' placeholder-class='placeholder'></input>
     </view>
@@ -13,7 +13,7 @@
     <view class=''>筛选</view>
   </view>
   <view class="list">
-    <navigator class="item" url='../shop/index?id={{item.id}}&name={{item.sname}}&img={{item.logo}}' wx:for="{{list}}" wx:key="index" bindtap='test' data-info="{{item}}">
+    <navigator class="item" url='../shop/index?id={{item.id}}&name={{item.sname}}&img={{item.logo}}' wx:for="{{list}}" wx:key="index" bindtap='test' data-info="{{item}}" hover-class='none'>
       <view class="item-left">
         <image src="{{item.logo}}" ></image>
       </view>

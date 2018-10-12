@@ -5,7 +5,7 @@
   <view class="head-right">
     <view>
       <text>起送 ￥{{store.qsprice}} | </text>
-      <text>{{store.speed}}分钟 | </text>
+      <text>{{store.speed}}分钟  </text>
     </view>
     <view>
       <text>公告：欢迎光临{{store.sname}}</text>
@@ -117,25 +117,24 @@
     <view class='tagList'>
       <view class='{{currentItem==1?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="1">配送速度快</view>
       <view class='{{currentItem==2?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="2">好吃</view>
-      <view class='{{currentItem==3?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="3">服务好</view>
-      <view class='{{currentItem==4?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="4">配送速度快</view>
-      <view class='{{currentItem==5?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="5">配送速度快</view>
+      <view class='{{currentItem==3?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="3">服务态度好</view>
+      <view class='{{currentItem==4?"tagItem activeItem":"tagItem"}}' bindtap='clickScore' data-index="4">包装完整</view>
     </view>
     <scroll-view class='scoreList'>
       <view class='scoreItem'>
         <view class='scoreItem-left'>
-          <image src='../../images/user.jpg' mode='center'></image>
+          <image src='../../images/user.png'></image>
         </view>
         <view class='scoreItem-right'>
           <view><text class='username'>用户名</text> <text class='time'>2018.8.10</text> </view>
           <view class='scoreItem-txt'>
-            好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃好吃
+            味道还不错，下次会再来
           </view>
         </view>
       </view>
       <view class='scoreItem'>
         <view class='scoreItem-left'>
-          <image src='../../images/user.jpg' mode='center'></image>
+          <image src='../../images/user.png'></image>
         </view>
         <view class='scoreItem-right'>
           <view><text class='username'>用户名</text> <text class='time'>2018.8.10</text> </view>
@@ -187,7 +186,6 @@
  <!-- 购物车弹窗  -->
  <view class='modal-screen' style='height:{{modalHeight-55}}px' wx:if="{{cartModal}}">
       <view class='cartModal'>
-        
         <view class="delete">删除</view>
         <view class='cart-list'>
           <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.info.id}}">
