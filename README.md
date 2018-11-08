@@ -4,10 +4,8 @@
 * 获取商家和商品
 * 添加修改地址 </br>
 * 基本的页面交互
+* 条件排序商家
 部分演示图</br>
-
-
-
 ![image text](https://github.com/lazyChan297/Img-folder/blob/master/meituan-web-app/meituan-index.gif?raw=true) </br>
 ![image text](https://github.com/lazyChan297/Img-folder/blob/master/meituan-web-app/meituan-1.gif?raw=true) </br>
 ![image text](https://github.com/lazyChan297/Img-folder/blob/master/meituan-web-app/meituan-address.gif?raw=true) </br>
